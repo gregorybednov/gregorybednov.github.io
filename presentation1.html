@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
@@ -7,76 +8,112 @@
   <title>Практическое занятие 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
-    .reveal .sourceCode {  /* see #7635 */
+    .reveal .sourceCode {
+      /* see #7635 */
       overflow: visible;
     }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+    code {
+      white-space: pre-wrap;
+    }
+
+    span.smallcaps {
+      font-variant: small-caps;
+    }
+
+    div.columns {
+      display: flex;
+      gap: min(4vw, 1.5em);
+    }
+
+    div.column {
+      flex: auto;
+      overflow-x: auto;
+    }
+
+    div.hanging-indent {
+      margin-left: 1.5em;
+      text-indent: -1.5em;
+    }
+
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
+    ul.task-list[class] {
+      list-style: none;
+    }
+
     ul.task-list li input[type="checkbox"] {
       font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    .display.math {
+      display: block;
+      text-align: center;
+      margin: 0.5rem auto;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
 </head>
+
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide">
-  <h1 class="title">Практическое занятие 1</h1>
-  <p class="author">Беднов Г.А.</p>
-</section>
+      <section id="title-slide">
+        <h1 class="title">Практическое занятие 1</h1>
+        <p class="author">Беднов Г.А.</p>
+      </section>
 
-<section class="slide level1">
+      <section class="slide level1">
 
-<h2 id="кто-я-и-где-искать">кто я и где искать?</h2>
-<p>Преподаватель: Беднов Григорий Александрович, ассистент кафедры ПИ
-ИИИ</p>
-<p><img data-src="telegram.png" style="width:5.0%" /> etzelhun <img
-data-src="github_light.svg" style="width:5.0%" /> gregorybednov <img
-data-src="mail.png" style="width:5.0%" /> bednov@mirea.ru <img
-data-src="internet.png" style="width:5.0%" />
-gregorybednov.github.io</p>
-<p><strong>записан как Аноним666? Представься!</strong></p>
-</section>
-<section id="обзор-курса" class="slide level1">
-<h1>обзор курса</h1>
-<ul>
-<li><p>32 практические работы, каждая с отчётом</p></li>
-<li><p>это <em>Много</em> дел, поэтому курс разбит по модулям.</p></li>
-<li><p>Дедлайн любой работы не более 1 месяца.</p></li>
-<li><p>Много работ Excel, но там где я указываю, можно прогать</p></li>
-</ul>
-</section>
-<section id="вопросы" class="slide level1">
-<h1>Вопросы?</h1>
-<p>Есть ли вопросы - задавайте.</p>
-<p>P.S. Во время объяснения материала можно спрашивать.</p>
-</section>
-<section id="информация-и-её-кодирование." class="slide level1">
-<h1>Информация и её кодирование.</h1>
-<ul>
-<li>О понятиях информации и энтропии, а также кодах</li>
-</ul>
-</section>
-<section id="простой-и-экзотический-пример-с-кодированием"
-class="slide level1">
-<h1>простой и экзотический пример с кодированием</h1>
-<!--
+        <h2 id="кто-я-и-где-искать">кто я и где искать?</h2>
+        <p>Преподаватель: Беднов Григорий Александрович, ассистент кафедры ПИ
+          ИИИ</p>
+        <p><img data-src="telegram.png" style="width:5.0%" /> etzelhun <img data-src="github_light.svg"
+            style="width:5.0%" /> gregorybednov <img data-src="mail.png" style="width:5.0%" /> bednov@mirea.ru <img
+            data-src="internet.png" style="width:5.0%" />
+          gregorybednov.github.io</p>
+        <p><strong>записан как Аноним666? Представься!</strong></p>
+      </section>
+      <section id="обзор-курса" class="slide level1">
+        <h1>обзор курса</h1>
+        <ul>
+          <li>
+            <p>32 практические работы, каждая с отчётом</p>
+          </li>
+          <li>
+            <p>это <em>Много</em> дел, поэтому курс разбит по модулям.</p>
+          </li>
+          <li>
+            <p>Дедлайн любой работы не более 1 месяца.</p>
+          </li>
+          <li>
+            <p>Много работ Excel, но там где я указываю, можно прогать</p>
+          </li>
+        </ul>
+      </section>
+      <section id="вопросы" class="slide level1">
+        <h1>Вопросы?</h1>
+        <p>Есть ли вопросы - задавайте.</p>
+        <p>P.S. Во время объяснения материала можно спрашивать.</p>
+      </section>
+      <section id="информация-и-её-кодирование." class="slide level1">
+        <h1>Информация и её кодирование.</h1>
+        <ul>
+          <li>О понятиях информации и энтропии, а также кодах</li>
+        </ul>
+      </section>
+      <section id="простой-и-экзотический-пример-с-кодированием" class="slide level1">
+        <h1>простой и экзотический пример с кодированием</h1>
+        <!--
 
 Я рассказываю про племя охотников, вырезавшие разные
 знаки на деревьях. А также что если бы знак был один, то
@@ -92,205 +129,263 @@ class="slide level1">
 И наоборот. Моё мычание это НЕ информация.
 
 -->
-</section>
-<section id="выводы" class="slide level1">
-<h1>выводы</h1>
-<ul>
-<li><p>даже отсутствие знака бывает другим знаком (и тогда всего знаков
-минимум 2)</p></li>
-<li><p>информация осмыслена: это про <em>связь</em> знака с чем-то ещё,
-с вещью или признаком</p></li>
-<li><p>информация контекстуальна;</p></li>
-<li><p>информация <em>как правило</em> характеризуется ярко выраженными
-и легко различимыми кодами.</p></li>
-</ul>
-</section>
-<section id="формула-хартли" class="slide level1">
-<h1>Формула Хартли</h1>
-<p>Применяется для вычисления количества информации равновероятных
-событий</p>
-</section>
-<section id="n-le-2k" class="slide level1">
-<h1><span
-class="math display"><em>N</em> ≤ 2<sup><em>K</em></sup></span></h1>
-</section>
-<section id="kleftlceil-log_2-n-rightrceil" class="slide level1">
-<h1><span
-class="math display"><em>K</em> = ⌈log<sub>2</sub><em>N</em>⌉</span></h1>
-</section>
-<section id="провокации" class="slide level1">
-<h1>“Провокации”</h1>
-<p>Казалось бы, если 0 и 1 достаточно…</p>
-<ol type="1">
-<li><p>Ясно ли сейчас в Париже? (0/1, “не знаю” нельзя)</p></li>
-<li><p>А снижается ли неопределённость когда говоришь “не
-знаю”?</p></li>
-</ol>
-</section>
-<section id="определения" class="slide level1">
-<h1>определениЯ</h1>
-<p>ГОСТ Р 50922-96 Защита информации. Основные термины и определения</p>
-<p>“Информация - сведения о лицах, предметах, фактах, событиях, явлениях
-и процессах независимо от формы их представления.”</p>
-</section>
-<section id="определения-1" class="slide level1">
-<h1>определениЯ</h1>
-<p>ГОСТ 33707 - 2016 Информационные технологии. Словарь</p>
-<p>“Информация (в области обработки информации): Любые данные,
-представленные в электронной форме, написанные на бумаге, высказанные на
-совещании или находящиеся на любом другом носителе, используемые
-финансовым учреждением для принятия решений, перемещения денежных
-средств, установления ставок, предоставления ссуд, обработки операций и
-т. п., включая компоненты программного обеспечения системы
-обработки.”</p>
-</section>
-<section id="определения-2" class="slide level1">
-<h1>определения</h1>
-<p>“Информация в наиболее общем смысле термина есть отображение
-реальности, осуществленное в той или иной системе предназначенных для
-этого средств. Это, если угодно, <em>продукт способности самоотражения
-материи</em>.</p>
-<p>Отражение - всякое копирование, изображение, подражание, и даже
-постижение и выражение сущности отражаемого”</p>
-<p>(“Начала информатики”, Н.П. Брусенцов, 1994 г.)</p>
-</section>
-<section id="выводы-1" class="slide level1">
-<h1>Выводы</h1>
-<ul>
-<li><p>у информации много определений,</p></li>
-<li><p>понятие скорее философское - уточняйте точное значение,</p></li>
-<li><p>но все сходятся что существуют различные формы представления или
-кодирования,</p></li>
-<li><p>важна среда информации (писатель, носитель и читатель),</p></li>
-<li><p>но в инженерных задачах - стандарты.</p></li>
-</ul>
-</section>
-<section id="информационная-ёмкость-и-кодирование-информации"
-class="slide level1">
-<h1>Информационная ёмкость и кодирование информации</h1>
-</section>
-<section id="единицы-измерения" class="slide level1">
-<h1>Единицы измерения</h1>
-<ul>
-<li><p>бит (б)</p></li>
-<li><p>Байт (Б) = 8 б</p></li>
-<li><p>десятичные (1000) приставки: кило (к), мега (М), гига (Г),
-…</p></li>
-<li><p>двоичные (<span class="math inline">2<sup>10</sup> = 1024</span>)
-приставки: киби (Ки), меби (Ми), гиби (Ги), …</p></li>
-</ul>
-</section>
-<section id="ячейки" class="slide level1">
-<h1>Ячейки</h1>
-<ul>
-<li><p>Не являются строгими единицами измерения информации!</p></li>
-<li><p>Ниббл (4 бита), байт (8 бит), слово (16 бит или 32 бит), двойное
-слово (32 бита или 64 бита)</p></li>
-<li><p><code>char</code>, <code>unsigned char</code>,
-<code>signed char</code> из C/C++ - байт (как минимальная
-ячейка)</p></li>
-<li><p>как правило, слово - это основная ячейка.</p></li>
-<li><p>это <em>инженерное</em> решение, о причинах - см. след.
-занятие</p></li>
-</ul>
-</section>
-<section id="пример" class="slide level1">
-<h1>Пример</h1>
-<p>Машинная ячейка длиной 1 байт <strong>всегда</strong> 8 бит:</p>
-<p><code>00000000</code></p>
-<p>…</p>
-<p><code>10110110</code></p>
-<p>…</p>
-<p><code>11111111</code></p>
-<p>256 (<span class="math inline"> = 2<sup>8</sup></span>) различных
-значений.</p>
-</section>
-<section id="ячейки---выводы" class="slide level1">
-<h1>Ячейки - выводы</h1>
-<ul>
-<li>постоянная информационная ёмкость</li>
-<li>постоянное количество различных значений</li>
-</ul>
-<p>Но: возможны разные способы трактовки 0 и 1, например</p>
-<ul>
-<li>разные типы данных</li>
-<li>разные диапазоны значений</li>
-</ul>
-</section>
-<section id="кодирование-текстовых-данных." class="slide level1">
-<h1>Кодирование текстовых данных.</h1>
-</section>
-<section id="ascii" class="slide level1">
-<h1>ASCII</h1>
-<ul>
-<li><p>Изобрели телетайпную (телеграфную) связь</p></li>
-<li><p>Выяснилось, что пересылать данные между разными организациями и
-моделями компов невозможно</p></li>
-<li><p>Утвердили единую семибитную кодировку (ASCII)</p></li>
-</ul>
-</section>
-<section id="национальные-кодировки-однобайтные" class="slide level1">
-<h1>Национальные кодировки однобайтные</h1>
-<ul>
-<li><p>Воспользовались оставшимся битом на разные национальные кодировки
-(DOS CP866, Windows-1253, КОИ-8R)</p></li>
-<li><p>Выяснилось, что общаться с другими странами всё равно
-невозможно</p></li>
-</ul>
-</section>
-<section id="попытка-1" class="slide level1">
-<h1>Попытка 1</h1>
-<ul>
-<li><p>начало семейства Юникод;</p></li>
-<li><p>Придумали расширить кодировки двумя (UTF-16) или четырьмя
-(UTF-32) байтами</p></li>
-<li><p>Стало ясно что американцам/европейцам очень не удобно, теперь
-де-факто “сломан” ASCII</p></li>
-<li><p>Да и документы стали сильно больше весить</p></li>
-</ul>
-</section>
-<section id="попытка-2" class="slide level1">
-<h1>Попытка 2</h1>
-<ul>
-<li>(мы здесь!) продолжение семейства кодировок Юникод</li>
-<li>Как сделать чтобы бывший ASCII весил строго 1 байт, а всё остальное
-как можно меньше?</li>
-<li>Кодировка переменной длины UTF-8!</li>
-<li>Если 0…, то это ASCII.</li>
-<li>Если 10.., надо прочитать все оставшиеся биты этого байта и
-полностью читать 1 следующий</li>
-<li>Если 110.., надо еще 2 байта…</li>
-<li><ul>
-<li>добавить символы-комбинаторы</li>
-</ul></li>
-</ul>
-</section>
-<section id="итоги" class="slide level1">
-<h1>Итоги</h1>
-<h2 id="достоинства-юникода">Достоинства юникода</h2>
-<ul>
-<li>(𓎼𓂋𓇋 𓎼𓍿𓂋𓇋𓇋 𓄿𓃭𓇋𓎡𓋴𓄿𓈖𓂧𓂋𓍿𓆑𓇋𓍿) ❤️ 单一码</li>
-</ul>
-<h2 id="оставшиеся-проблемы">Оставшиеся проблемы</h2>
-<ul>
-<li>шрифты (их недостаток)</li>
-<li>BOM</li>
-<li>сложность реализации: вплоть до <em>теоретически возможной</em>
-Тьюринг-полноты</li>
-</ul>
-</section>
-<section id="выводы-2" class="slide level1">
-<h1>Выводы</h1>
-<ul>
-<li>UTF-8 захватил мир,</li>
-<li>ASCII — вечная классика,</li>
-<li>ещё живы: 1251, даже 866;</li>
-<li>в Азии бывают свои особенности, например, Unified Hangul Code -
-CP949,</li>
-<li>мертвы как вид 🦖: КОИ-8R, КОИ-8U, MacCyrillic, MacRoman, MIK,
-EUC-KR.</li>
-</ul>
-</section>
+      </section>
+      <section id="выводы" class="slide level1">
+        <h1>выводы</h1>
+        <ul>
+          <li>
+            <p>даже отсутствие знака бывает другим знаком (и тогда всего знаков
+              минимум 2)</p>
+          </li>
+          <li>
+            <p>информация осмыслена: это про <em>связь</em> знака с чем-то ещё,
+              с вещью или признаком</p>
+          </li>
+          <li>
+            <p>информация контекстуальна;</p>
+          </li>
+          <li>
+            <p>информация <em>как правило</em> характеризуется ярко выраженными
+              и легко различимыми кодами.</p>
+          </li>
+        </ul>
+      </section>
+      <section id="формула-хартли" class="slide level1">
+        <h1>Формула Хартли</h1>
+        <p>Применяется для вычисления количества информации равновероятных
+          событий</p>
+      </section>
+      <section id="n-le-2k" class="slide level1">
+        <h1><span class="math display"><em>N</em> ≤ 2<sup><em>K</em></sup></span></h1>
+      </section>
+      <section id="kleftlceil-log_2-n-rightrceil" class="slide level1">
+        <h1><span class="math display"><em>K</em> = ⌈log<sub>2</sub><em>N</em>⌉</span></h1>
+      </section>
+      <section id="провокации" class="slide level1">
+        <h1>“Провокации”</h1>
+        <p>Казалось бы, если 0 и 1 достаточно…</p>
+        <ol type="1">
+          <li>
+            <p>Ясно ли сейчас в Париже? (0/1, “не знаю” нельзя)</p>
+          </li>
+          <li>
+            <p>А снижается ли неопределённость когда говоришь “не
+              знаю”?</p>
+          </li>
+        </ol>
+      </section>
+      <section id="определения" class="slide level1">
+        <h1>определениЯ</h1>
+        <p>ГОСТ Р 50922-96 Защита информации. Основные термины и определения</p>
+        <p>“Информация - сведения о лицах, предметах, фактах, событиях, явлениях
+          и процессах независимо от формы их представления.”</p>
+      </section>
+      <section id="определения-1" class="slide level1">
+        <h1>определениЯ</h1>
+        <p>ГОСТ 33707 - 2016 Информационные технологии. Словарь</p>
+        <p>“Информация (в области обработки информации): Любые данные,
+          представленные в электронной форме, написанные на бумаге, высказанные на
+          совещании или находящиеся на любом другом носителе, используемые
+          финансовым учреждением для принятия решений, перемещения денежных
+          средств, установления ставок, предоставления ссуд, обработки операций и
+          т. п., включая компоненты программного обеспечения системы
+          обработки.”</p>
+      </section>
+      <section id="определения-2" class="slide level1">
+        <h1>определения</h1>
+        <p>“Информация в наиболее общем смысле термина есть отображение
+          реальности, осуществленное в той или иной системе предназначенных для
+          этого средств. Это, если угодно, <em>продукт способности самоотражения
+            материи</em>.</p>
+        <p>Отражение - всякое копирование, изображение, подражание, и даже
+          постижение и выражение сущности отражаемого”</p>
+        <p>(“Начала информатики”, Н.П. Брусенцов, 1994 г.)</p>
+      </section>
+      <section id="выводы-1" class="slide level1">
+        <h1>Выводы</h1>
+        <ul>
+          <li>
+            <p>у информации много определений,</p>
+          </li>
+          <li>
+            <p>понятие скорее философское - уточняйте точное значение,</p>
+          </li>
+          <li>
+            <p>но все сходятся что существуют различные формы представления или
+              кодирования,</p>
+          </li>
+          <li>
+            <p>важна среда информации (писатель, носитель и читатель),</p>
+          </li>
+          <li>
+            <p>но в инженерных задачах - стандарты.</p>
+          </li>
+        </ul>
+      </section>
+      <section id="информационная-ёмкость-и-кодирование-информации" class="slide level1">
+        <h1>Информационная ёмкость и кодирование информации</h1>
+      </section>
+      <section id="единицы-измерения" class="slide level1">
+        <h1>Единицы измерения</h1>
+        <ul>
+          <li>
+            <p>бит (б)</p>
+          </li>
+          <li>
+            <p>Байт (Б) = 8 б</p>
+          </li>
+          <li>
+            <p>десятичные (1000) приставки: кило (к), мега (М), гига (Г),
+              …</p>
+          </li>
+          <li>
+            <p>двоичные (<span class="math inline">2<sup>10</sup> = 1024</span>)
+              приставки: киби (Ки), меби (Ми), гиби (Ги), …</p>
+          </li>
+        </ul>
+      </section>
+      <section id="ячейки" class="slide level1">
+        <h1>Ячейки</h1>
+        <ul>
+          <li>
+            <p>Не являются строгими единицами измерения информации!</p>
+          </li>
+          <li>
+            <p>Ниббл (4 бита), байт (8 бит), слово (16 бит или 32 бит), двойное
+              слово (32 бита или 64 бита)</p>
+          </li>
+          <li>
+            <p><code>char</code>, <code>unsigned char</code>,
+              <code>signed char</code> из C/C++ - байт (как минимальная
+              ячейка)
+            </p>
+          </li>
+          <li>
+            <p>как правило, слово - это основная ячейка.</p>
+          </li>
+          <li>
+            <p>это <em>инженерное</em> решение, о причинах - см. след.
+              занятие</p>
+          </li>
+        </ul>
+      </section>
+      <section id="пример" class="slide level1">
+        <h1>Пример</h1>
+        <p>Машинная ячейка длиной 1 байт <strong>всегда</strong> 8 бит:</p>
+        <p><code>00000000</code></p>
+        <p>…</p>
+        <p><code>10110110</code></p>
+        <p>…</p>
+        <p><code>11111111</code></p>
+        <p>256 (<span class="math inline"> = 2<sup>8</sup></span>) различных
+          значений.</p>
+      </section>
+      <section id="ячейки---выводы" class="slide level1">
+        <h1>Ячейки - выводы</h1>
+        <ul>
+          <li>постоянная информационная ёмкость</li>
+          <li>постоянное количество различных значений</li>
+        </ul>
+        <p>Но: возможны разные способы трактовки 0 и 1, например</p>
+        <ul>
+          <li>разные типы данных</li>
+          <li>разные диапазоны значений</li>
+        </ul>
+      </section>
+      <section id="кодирование-текстовых-данных." class="slide level1">
+        <h1>Кодирование текстовых данных.</h1>
+      </section>
+      <section id="ascii" class="slide level1">
+        <h1>ASCII</h1>
+        <ul>
+          <li>
+            <p>Изобрели телетайпную (телеграфную) связь</p>
+          </li>
+          <li>
+            <p>Выяснилось, что пересылать данные между разными организациями и
+              моделями компов невозможно</p>
+          </li>
+          <li>
+            <p>Утвердили единую семибитную кодировку (ASCII)</p>
+          </li>
+        </ul>
+      </section>
+      <section id="национальные-кодировки-однобайтные" class="slide level1">
+        <h1>Национальные кодировки однобайтные</h1>
+        <ul>
+          <li>
+            <p>Воспользовались оставшимся битом на разные национальные кодировки
+              (DOS CP866, Windows-1253, КОИ-8R)</p>
+          </li>
+          <li>
+            <p>Выяснилось, что общаться с другими странами всё равно
+              невозможно</p>
+          </li>
+        </ul>
+      </section>
+      <section id="попытка-1" class="slide level1">
+        <h1>Попытка 1</h1>
+        <ul>
+          <li>
+            <p>начало семейства Юникод;</p>
+          </li>
+          <li>
+            <p>Придумали расширить кодировки двумя (UTF-16) или четырьмя
+              (UTF-32) байтами</p>
+          </li>
+          <li>
+            <p>Стало ясно что американцам/европейцам очень не удобно, теперь
+              де-факто “сломан” ASCII</p>
+          </li>
+          <li>
+            <p>Да и документы стали сильно больше весить</p>
+          </li>
+        </ul>
+      </section>
+      <section id="попытка-2" class="slide level1">
+        <h1>Попытка 2</h1>
+        <ul>
+          <li>(мы здесь!) продолжение семейства кодировок Юникод</li>
+          <li>Как сделать чтобы бывший ASCII весил строго 1 байт, а всё остальное
+            как можно меньше?</li>
+          <li>Кодировка переменной длины UTF-8!</li>
+          <li>Если 0…, то это ASCII.</li>
+          <li>Если 10.., надо прочитать все оставшиеся биты этого байта и
+            полностью читать 1 следующий</li>
+          <li>Если 110.., надо еще 2 байта…</li>
+          <li>
+            <ul>
+              <li>добавить символы-комбинаторы</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="итоги" class="slide level1">
+        <h1>Итоги</h1>
+        <h2 id="достоинства-юникода">Достоинства юникода</h2>
+        <ul>
+          <li>(𓎼𓂋𓇋 𓎼𓍿𓂋𓇋𓇋 𓄿𓃭𓇋𓎡𓋴𓄿𓈖𓂧𓂋𓍿𓆑𓇋𓍿) ❤️ 单一码</li>
+        </ul>
+        <h2 id="оставшиеся-проблемы">Оставшиеся проблемы</h2>
+        <ul>
+          <li>шрифты (их недостаток)</li>
+          <li>BOM</li>
+          <li>сложность реализации: вплоть до <em>теоретически возможной</em>
+            Тьюринг-полноты</li>
+        </ul>
+      </section>
+      <section id="выводы-2" class="slide level1">
+        <h1>Выводы</h1>
+        <ul>
+          <li>UTF-8 захватил мир,</li>
+          <li>ASCII — вечная классика,</li>
+          <li>ещё живы: 1251, даже 866;</li>
+          <li>в Азии бывают свои особенности, например, Unified Hangul Code -
+            CP949,</li>
+          <li>мертвы как вид 🦖: КОИ-8R, КОИ-8U, MacCyrillic, MacRoman, MIK,
+            EUC-KR.</li>
+        </ul>
+      </section>
     </div>
   </div>
 
@@ -303,156 +398,157 @@ EUC-KR.</li>
 
   <script>
 
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
+    // Full list of configuration options available at:
+    // https://revealjs.com/config/
+    Reveal.initialize({
+      // Display controls in the bottom right corner
+      controls: true,
 
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
 
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'bottom-right',
 
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
 
-        // Display a presentation progress bar
-        progress: true,
+      // Display a presentation progress bar
+      progress: true,
 
-        // Display the page number of the current slide
-        slideNumber: false,
+      // Display the page number of the current slide
+      slideNumber: false,
 
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
+      // 'all', 'print', or 'speaker'
+      showSlideNumber: 'all',
 
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
+      // Add the current slide number to the URL hash so that reloading the
+      // page/copying the URL will return you to the same slide
+      hash: true,
 
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
+      // Start with 1 for the hash rather than 0
+      hashOneBasedIndex: false,
 
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
+      // Flags if we should monitor the hash and change slides accordingly
+      respondToHashChanges: true,
 
-        // Push each slide change to the browser history
-        history: false,
+      // Push each slide change to the browser history
+      history: false,
 
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
 
-        // Enable the slide overview mode
-        overview: true,
+      // Enable the slide overview mode
+      overview: true,
 
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
+      // Disables the default reveal.js slide layout (scaling and centering)
+      // so that you can use custom CSS layout
+      disableLayout: false,
 
-        // Vertical centering of slides
-        center: true,
+      // Vertical centering of slides
+      center: true,
 
-        // Enables touch navigation on devices with touch input
-        touch: true,
+      // Enables touch navigation on devices with touch input
+      touch: true,
 
-        // Loop the presentation
-        loop: false,
+      // Loop the presentation
+      loop: false,
 
-        // Change the presentation direction to be RTL
-        rtl: false,
+      // Change the presentation direction to be RTL
+      rtl: false,
 
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
+      // see https://revealjs.com/vertical-slides/#navigation-mode
+      navigationMode: 'default',
 
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
+      // Randomizes the order of slides each time the presentation loads
+      shuffle: false,
 
-        // Turns fragments on and off globally
-        fragments: true,
+      // Turns fragments on and off globally
+      fragments: true,
 
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: true,
+      // Flags whether to include the current fragment in the URL,
+      // so that reloading brings you to the same fragment position
+      fragmentInURL: true,
 
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
+      // Flags if the presentation is running in an embedded mode,
+      // i.e. contained within a limited portion of the screen
+      embedded: false,
 
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
+      // Flags if we should show a help overlay when the questionmark
+      // key is pressed
+      help: true,
 
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
+      // Flags if it should be possible to pause the presentation (blackout)
+      pause: true,
 
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
+      // Flags if speaker notes should be visible to all viewers
+      showNotes: false,
 
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
+      // Global override for autoplaying embedded media (null/true/false)
+      autoPlayMedia: null,
 
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
+      // Global override for preloading lazy-loaded iframes (null/true/false)
+      preloadIframes: null,
 
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
+      // Number of milliseconds between automatically proceeding to the
+      // next slide, disabled when set to 0, this value can be overwritten
+      // by using a data-autoslide attribute on your slides
+      autoSlide: 0,
 
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
+      // Stop auto-sliding after user input
+      autoSlideStoppable: true,
 
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
+      // Use this method for navigation when auto-sliding
+      autoSlideMethod: null,
 
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
+      // Specify the average time in seconds that you think you will spend
+      // presenting each slide. This is used to show a pacing timer in the
+      // speaker view
+      defaultTiming: null,
 
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+      // Enable slide navigation via mouse wheel
+      mouseWheel: false,
 
-        // The display mode that will be used to show slides
-        display: 'block',
+      // The display mode that will be used to show slides
+      display: 'block',
 
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
+      // Hide cursor if inactive
+      hideInactiveCursor: true,
 
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
+      // Time before the cursor is hidden (in ms)
+      hideCursorTime: 5000,
 
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
+      // Opens links in an iframe preview overlay
+      previewLinks: false,
 
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+      // Transition style (none/fade/slide/convex/concave/zoom)
+      transition: 'slide',
 
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+      // Transition speed (default/fast/slow)
+      transitionSpeed: 'default',
 
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+      // Transition style for full page slide backgrounds
+      // (none/fade/slide/convex/concave/zoom)
+      backgroundTransition: 'fade',
 
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
+      // Number of slides away from the current that are visible
+      viewDistance: 3,
 
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
+      // Number of slides away from the current that are visible on mobile
+      // devices. It is advisable to set this to a lower number than
+      // viewDistance in order to save resources.
+      mobileViewDistance: 2,
 
-        // reveal.js plugins
-        plugins: [
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script>
-    </body>
+      // reveal.js plugins
+      plugins: [
+        RevealNotes,
+        RevealSearch,
+        RevealZoom
+      ]
+    });
+  </script>
+</body>
+
 </html>
