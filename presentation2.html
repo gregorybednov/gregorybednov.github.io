@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="author" content="Беднов Г.А." />
+    <title>Практическое занятие 2</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@^4//dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@^4//dist/reveal.css"
+    />
+    <style>
+      .reveal .sourceCode {
+        /* see #7635 */
+        overflow: visible;
+      }
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      div.columns {
+        display: flex;
+        gap: min(4vw, 1.5em);
+      }
+      div.column {
+        flex: auto;
+        overflow-x: auto;
+      }
+      div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+      }
+      /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+      ul.task-list[class] {
+        list-style: none;
+      }
+      ul.task-list li input[type="checkbox"] {
+        font-size: inherit;
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@^4//dist/theme/black.css"
+      id="theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title-slide">
+          <h1 class="title">Практическое занятие 2</h1>
+          <p class="author">Беднов Г.А.</p>
+        </section>
+
+        <section id="системы-счисления." class="slide level1">
+          <h1>Системы счисления.</h1>
+        </section>
+        <section id="снова-про-количество-информации" class="slide level1">
+          <h1>Снова про количество информации</h1>
+          <ul>
+            <li>Но главное, а что значит “закодировать число”?</li>
+          </ul>
+        </section>
+        <section id="двоичная-система-счисления" class="slide level1">
+          <h1>Двоичная система счисления</h1>
+          <ul>
+            <li><p>Это значит “взвесить” число на “весах”!</p></li>
+            <li><p>с одной стороны весов: груз</p></li>
+            <li>
+              <p>
+                с другой стороны - гирьки 1, 2, 4, 8, …,
+                <math
+                  display="inline"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><msup><mn>2</mn><mi>N</mi></msup
+                    ><annotation encoding="application/x-tex"
+                      >2^N</annotation
+                    ></semantics
+                  ></math
+                >
+              </p>
+            </li>
+            <li><p>“1” положить гирьку, а “0” — убрать;</p></li>
+          </ul>
+        </section>
+        <section id="троичная-симметричная" class="slide level1">
+          <h1>Троичная симметричная</h1>
+          <ul>
+            <li><p>основание: 3</p></li>
+            <li><p>цифры: -1, 0, +1</p></li>
+            <li>
+              <p>
+                примеры: ++ (<math
+                  display="inline"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><msub><mn>4</mn><mn>10</mn></msub
+                    ><annotation encoding="application/x-tex"
+                      >4_{10}</annotation
+                    ></semantics
+                  ></math
+                >), +- (<math
+                  display="inline"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><mrow
+                      ><mi>+</mi><mn>3</mn><mo>−</mo><mn>1</mn><mo>=</mo
+                      ><mn>2</mn></mrow
+                    ><annotation encoding="application/x-tex"
+                      >+3-1=2</annotation
+                    ></semantics
+                  ></math
+                >), -+ (<math
+                  display="inline"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><mrow
+                      ><mi>−</mi><mn>3</mn><mo>+</mo><mn>1</mn><mo>=</mo
+                      ><mi>−</mi><mn>2</mn></mrow
+                    ><annotation encoding="application/x-tex"
+                      >-3+1=-2</annotation
+                    ></semantics
+                  ></math
+                >)
+              </p>
+            </li>
+            <li>
+              <p>
+                для симм. систем счисления “гирьки” на весах можно класть на ту
+                же чашу, что и сам груз;
+              </p>
+            </li>
+            <li>
+              <p>
+                минимальная доступная симметричная позиционная система счисления
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section id="сравнение-пример" class="slide level1">
+          <h1>Сравнение (пример)</h1>
+          <p>
+            Число
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><msub><mn>19</mn><mn>10</mn></msub
+                ><annotation encoding="application/x-tex"
+                  >19_{10}</annotation
+                ></semantics
+              ></math
+            >:
+          </p>
+          <table style="width: 61%">
+            <colgroup>
+              <col style="width: 18%" />
+              <col style="width: 18%" />
+              <col style="width: 25%" />
+            </colgroup>
+            <tbody>
+              <tr class="odd">
+                <td rowspan="2">
+                  <pre><code>  x</code></pre>
+                  <p><img data-src="cup.svg" /></p>
+                </td>
+                <td rowspan="2">
+                  <pre><code>1+2+16</code></pre>
+                  <p><img data-src="cup.svg" /></p>
+                </td>
+                <td rowspan="2">
+                  <p><del>&lt;1, 4, 8, ≥32</del></p>
+                  <p>
+                    <math
+                      display="inline"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                      ><semantics
+                        ><msub><mn>10011</mn><mn>2</mn></msub
+                        ><annotation encoding="application/x-tex"
+                          >10011_2</annotation
+                        ></semantics
+                      ></math
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr class="even"></tr>
+            </tbody>
+          </table>
+          <table style="width: 61%">
+            <colgroup>
+              <col style="width: 18%" />
+              <col style="width: 18%" />
+              <col style="width: 25%" />
+            </colgroup>
+            <tbody>
+              <tr class="odd">
+                <td rowspan="2">
+                  <pre><code>  x+9</code></pre>
+                  <p><img data-src="cup.svg" /></p>
+                </td>
+                <td rowspan="2">
+                  <pre><code>27+1</code></pre>
+                  <p><img data-src="cup.svg" /></p>
+                </td>
+                <td rowspan="2">
+                  <p><del>&lt;1, 3, ≥81</del></p>
+                  <p>
+                    <math
+                      display="inline"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                      ><semantics
+                        ><mrow
+                          ><mi>+</mi><mo>−</mo><mn>0</mn
+                          ><msub
+                            ><mo>+</mo><mrow><mn>3</mn><mi>C</mi></mrow></msub
+                          ></mrow
+                        ><annotation encoding="application/x-tex"
+                          >+-0+_{3C}</annotation
+                        ></semantics
+                      ></math
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr class="even"></tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="сравнение-2" class="slide level1">
+          <h1>Сравнение 2</h1>
+          <table style="width: 60%">
+            <colgroup>
+              <col style="width: 23%" />
+              <col style="width: 36%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th>Двоичная</th>
+                <th>Троичная симм.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td>напряжение</td>
+                <td>ток? момент?</td>
+              </tr>
+              <tr class="even">
+                <td>привычна</td>
+                <td>инопланетянин</td>
+              </tr>
+              <tr class="odd">
+                <td>экономна</td>
+                <td>в теории, производительная</td>
+              </tr>
+              <tr class="even">
+                <td>минимальная</td>
+                <td>минимальная симметричная</td>
+              </tr>
+              <tr class="odd">
+                <td>О.К., П.К., Д.К.</td>
+                <td>нативная поддержка минуса</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section
+          id="кодирование-чисел-в-двоичных-ячейках."
+          class="slide level1"
+        >
+          <h1>Кодирование чисел в двоичных ячейках.</h1>
+        </section>
+        <section id="беззнаковые-числа" class="slide level1">
+          <h1>Беззнаковые числа</h1>
+          <ul>
+            <li>
+              <p>
+                <code>unsigned</code>-типы в C++ (<code
+                  >unsigned int, unsigned char, unsigned long int</code
+                >, …);
+              </p>
+            </li>
+            <li><p>все биты — под двоичные цифры;</p></li>
+            <li>
+              <p>
+                диапазон от 0 до
+                <math
+                  display="inline"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><msup><mn>2</mn><mi>k</mi></msup
+                    ><annotation encoding="application/x-tex"
+                      >2^k</annotation
+                    ></semantics
+                  ></math
+                >;
+              </p>
+            </li>
+            <li><p>за 255 следует… снова 0 (цикличность значений)</p></li>
+          </ul>
+        </section>
+        <section id="carry-flag" class="slide level1">
+          <h1>Carry flag</h1>
+          <p>на примере ячейки 1 байт</p>
+          <pre><code>   1111.1111
+   0000.0001
+------------
+(1)0000.0000</code></pre>
+          <p>255 + 1 = 0 (CF=1)</p>
+          <p>
+            Когда емкость ячейки исчерпана - нужно сделать “перенос” в/из ячейки
+            старше,
+          </p>
+          <p><em>включается CF=1</em></p>
+          <ul>
+            <li>
+              Делается ли перенос автоматически?
+              <em>Нет, просто дается флаг</em>
+            </li>
+          </ul>
+        </section>
+        <section id="числа-со-знаком" class="slide level1">
+          <h1>Числа со знаком</h1>
+          <ul>
+            <li>
+              <p>
+                Как вообще кодировать знак числа, если доступны только цифры?
+              </p>
+            </li>
+            <li>
+              <p>Как отдельно учесть что мы в <em>ячейке</em>?</p>
+            </li>
+          </ul>
+        </section>
+        <section id="п.к.--1_2" class="slide level1">
+          <h1>
+            <u>1</u
+            ><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><msub
+                    ><mn>000.0001</mn
+                    ><mrow><mi>П</mi><mi>.</mi><mi>К</mi><mi>.</mi></mrow></msub
+                  ><mo>=</mo><mi>−</mi><msub><mn>1</mn><mn>2</mn></msub></mrow
+                ><annotation encoding="application/x-tex"
+                  >000.0001_{П.К.}= -1_2</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <ul>
+            <li><p>прямой код</p></li>
+            <li><p>появился первым</p></li>
+            <li><p>первый бит инвертируется, остальные как были</p></li>
+            <li><p>понятен, но неудобен для схемотехники</p></li>
+            <li>
+              <p>устарел, кроме как для кодирования дробных (см.дальше)</p>
+            </li>
+          </ul>
+        </section>
+        <section id="о.к.--1_2" class="slide level1">
+          <h1>
+            <u>1</u
+            ><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><msub
+                    ><mn>111.1110</mn
+                    ><mrow><mi>О</mi><mi>.</mi><mi>К</mi><mi>.</mi></mrow></msub
+                  ><mo>=</mo><mi>−</mi><msub><mn>1</mn><mn>2</mn></msub></mrow
+                ><annotation encoding="application/x-tex"
+                  >111.1110_{О.К.}= -1_2</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <ul>
+            <li><p>обратный код</p></li>
+            <li><p>инвертируются все биты</p></li>
+            <li><p>универсальнее чем прямой, но тоже устарел</p></li>
+            <li><p>обычно не используется совсем</p></li>
+          </ul>
+        </section>
+        <section id="д.к.--1_2" class="slide level1">
+          <h1>
+            <u>1</u
+            ><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><msub
+                    ><mn>111.1111</mn
+                    ><mrow><mi>Д</mi><mi>.</mi><mi>К</mi><mi>.</mi></mrow></msub
+                  ><mo>=</mo><mi>−</mi><msub><mn>1</mn><mn>2</mn></msub></mrow
+                ><annotation encoding="application/x-tex"
+                  >111.1111_{Д.К.}= -1_2</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <ul>
+            <li><p>дополнительный код</p></li>
+            <li><p>обратный код + 1</p></li>
+            <li>
+              <p><em>цикличен</em>; что сложить 2+(-3), что вычесть 2-3</p>
+            </li>
+            <li><p>доминирует при кодировании целых чисел со знаком</p></li>
+          </ul>
+        </section>
+        <section id="overflow-flag" class="slide level1">
+          <h1>overflow flag</h1>
+          <p>7+1 = <code>0111 + 0001 = 1000</code></p>
+          <p>
+            для ниббла в доп.коде
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><msub
+                    ><mn>1000</mn
+                    ><mrow><mi>Д</mi><mi>.</mi><mi>К</mi></mrow></msub
+                  ><mo>=</mo><mi>−</mi><mn>8</mn></mrow
+                ><annotation encoding="application/x-tex"
+                  >1000_{Д.К} = -8</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <blockquote>
+            <p>Математический блокбастер</p>
+            <p>“7 + 1 = -8”</p>
+            <blockquote>
+              <p>от создателей 127 + 1 = -128 (для байта)</p>
+            </blockquote>
+          </blockquote>
+          <ul>
+            <li>
+              если мы “задеваем” старший бит, будет overflow flag (флаг
+              переполнения)
+            </li>
+          </ul>
+        </section>
+        <section id="плавающая-точка" class="slide level1">
+          <h1>плавающая точка</h1>
+          <p>Можно обойтись без них:</p>
+          <ul>
+            <li>рубли (просто пересчитай на копейки)</li>
+            <li>фиксированная точность (две, три цифры после запятой)</li>
+          </ul>
+          <p>Когда надо:</p>
+          <ul>
+            <li>
+              разнородные величины (число Авогадро
+              <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mn>6.022</mn><mn>140</mn><mn>76</mn><mo>⋅</mo
+                    ><msup><mn>10</mn><mn>23</mn></msup></mrow
+                  ><annotation encoding="application/x-tex"
+                    >6.022 140 76⋅10^{23}</annotation
+                  ></semantics
+                ></math
+              >, атомная масса водорода
+              <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mn>1.67</mn><mo>⋅</mo
+                    ><msup
+                      ><mn>10</mn><mrow><mi>−</mi><mn>24</mn></mrow></msup
+                    ></mrow
+                  ><annotation encoding="application/x-tex"
+                    >1.67⋅10^{−24}</annotation
+                  ></semantics
+                ></math
+              >)
+            </li>
+          </ul>
+        </section>
+        <section id="ieee-754" class="slide level1">
+          <h1>IEEE 754</h1>
+          <ul>
+            <li>
+              <p><code>float, double, long double</code> из C++</p>
+            </li>
+            <li>
+              <p><code>Number</code> из JavaScript</p>
+            </li>
+            <li><p>один бит - на знак</p></li>
+            <li><p>один байт - на порядок</p></li>
+            <li><p>остальное - на мантиссу</p></li>
+          </ul>
+        </section>
+        <section id="булева-алгебра." class="slide level1">
+          <h1>Булева алгебра.</h1>
+        </section>
+        <section id="три-булевы-функции" class="slide level1">
+          <h1>три булевы функции</h1>
+          <table style="width: 64%">
+            <colgroup>
+              <col style="width: 23%" />
+              <col style="width: 9%" />
+              <col style="width: 30%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th>обозначение</th>
+                <th>имя</th>
+                <th>варианты обозначений</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td>
+                  <math
+                    display="inline"
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><semantics
+                      ><mover><mi>a</mi><mo accent="true">¯</mo></mover
+                      ><annotation encoding="application/x-tex"
+                        >\overline{a}</annotation
+                      ></semantics
+                    ></math
+                  >
+                </td>
+                <td>НЕ</td>
+                <td>a’, ¬a</td>
+              </tr>
+              <tr class="even">
+                <td>
+                  <math
+                    display="inline"
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><semantics
+                      ><mrow><mi>a</mi><mo>∧</mo><mrow></mrow><mi>b</mi></mrow
+                      ><annotation encoding="application/x-tex"
+                        >a\land{}b</annotation
+                      ></semantics
+                    ></math
+                  >
+                </td>
+                <td>И</td>
+                <td>
+                  ab,
+                  <math
+                    display="inline"
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><semantics
+                      ><mrow><mi>a</mi><mo>⋅</mo><mrow></mrow><mi>b</mi></mrow
+                      ><annotation encoding="application/x-tex"
+                        >a\cdot{}b</annotation
+                      ></semantics
+                    ></math
+                  >
+                </td>
+              </tr>
+              <tr class="odd">
+                <td>
+                  <math
+                    display="inline"
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><semantics
+                      ><mrow><mi>a</mi><mo>∨</mo><mrow></mrow><mi>b</mi></mrow
+                      ><annotation encoding="application/x-tex"
+                        >a\lor{}b</annotation
+                      ></semantics
+                    ></math
+                  >
+                </td>
+                <td>ИЛИ</td>
+                <td>a+b</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="идея-джорджа-буля" class="slide level1">
+          <h1>Идея Джорджа Буля</h1>
+          <ul>
+            <li><p>Считаем что есть высказывания</p></li>
+            <li><p>Они истинны или ложны</p></li>
+            <li><p>Наша задача - узнать истину</p></li>
+            <li><p>Давайте посчитаем!</p></li>
+            <li><p>Ограничим алгебру сложением и умножением двух чисел</p></li>
+          </ul>
+        </section>
+        <section id="история-или" class="slide level1">
+          <h1>История ИЛИ</h1>
+          <p>Первоначально, Буль сделал “сложение” как исключающее ИЛИ:</p>
+          <p>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow><mi>a</mi><mo>⊕</mo><mrow></mrow><mi>b</mi></mrow
+                ><annotation encoding="application/x-tex"
+                  >a\oplus{}b</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <ul>
+            <li>
+              Действительно, именно она ближе к действию сложения для двоичной
+              системы счисления
+            </li>
+          </ul>
+          <p>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mn>0</mn><mo>⊕</mo><mrow></mrow><mn>1</mn><mo>=</mo
+                  ><mn>1</mn><mo>⊕</mo><mrow></mrow><mn>0</mn><mo>=</mo
+                  ><mn>1</mn></mrow
+                ><annotation encoding="application/x-tex"
+                  >0\oplus{}1 = 1\oplus{}0 = 1</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <p>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mn>0</mn><mo>⊕</mo><mrow></mrow><mn>0</mn><mo>=</mo
+                  ><mn>1</mn><mo>⊕</mo><mrow></mrow><mn>1</mn><mo>=</mo
+                  ><mn>0</mn></mrow
+                ><annotation encoding="application/x-tex"
+                  >0\oplus{}0 = 1\oplus{}1 = 0</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <p>Но…</p>
+        </section>
+        <section id="победа-alorb" class="slide level1">
+          <h1>
+            Победа
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow><mi>a</mi><mo>∨</mo><mrow></mrow><mi>b</mi></mrow
+                ><annotation encoding="application/x-tex"
+                  >a\lor{}b</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <ul>
+            <li>
+              дело в том, что дизъюнкция — это MAX(), а конъюнкция это MIN()
+            </li>
+          </ul>
+          <p>заменив все</p>
+          <ul>
+            <li>0 на 1,</li>
+            <li>1 на 0</li>
+            <li>прямые термины на отрицания,</li>
+            <li>отрицания на прямые термины</li>
+            <li>ИЛИ на И</li>
+            <li>И на ИЛИ</li>
+          </ul>
+          <p>получите то же самое выражение! (дуальность)</p>
+          <p>Из-за этого булева Алгебра “симметрична”</p>
+        </section>
+        <section id="идея-порецкого" class="slide level1">
+          <h1>Идея Порецкого</h1>
+          <ul>
+            <li><p>А что если смысл не в высказываниях, а в признаках?</p></li>
+            <li>
+              <p>
+                пусть X - это определение, разделяющее все предметы в мире на x
+                и x’
+              </p>
+            </li>
+            <li>
+              <p>
+                в таком случае, конъюнкция — это создание более строгого
+                определения из двух других
+              </p>
+            </li>
+            <li><p>а дизъюнкция — менее строгого</p></li>
+          </ul>
+        </section>
+        <section id="пример" class="slide level1">
+          <h1>пример</h1>
+          <p>Пусть вкусное (В), полезное (П)</p>
+          <p>
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow><mi>В</mi><mo>∨</mo><mrow></mrow><mi>П</mi></mrow
+                ><annotation encoding="application/x-tex"
+                  >В\lor{}П</annotation
+                ></semantics
+              ></math
+            >
+            — чем питается человек
+          </p>
+          <p>
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mover
+                  ><mrow><mi>B</mi><mo>∨</mo><mrow></mrow><mi>П</mi></mrow
+                  ><mo accent="true">¯</mo></mover
+                ><annotation encoding="application/x-tex"
+                  >\overline{B\lor{}П}</annotation
+                ></semantics
+              ></math
+            >
+            - то, чем человек не питается
+          </p>
+          <p>По закону де Моргана,</p>
+          <p>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mover
+                    ><mrow><mi>B</mi><mo>∨</mo><mrow></mrow><mi>П</mi></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>=</mo><mi>¬</mi><mi>В</mi><mo>⋅</mo><mrow></mrow
+                  ><mi>¬</mi><mi>П</mi></mrow
+                ><annotation encoding="application/x-tex"
+                  >\overline{B\lor{}П} = ¬В\cdot{}¬П</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <p>Значит, невкусное и неполезное есть человек не захочет точно.</p>
+        </section>
+        <section id="дизъюнкция-по-множеству" class="slide level1">
+          <h1>Дизъюнкция по множеству</h1>
+          <p>
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow><mo>⋁</mo><mi>x</mi><mo>=</mo></mrow
+                ><annotation encoding="application/x-tex"
+                  >\bigvee{x}=</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+          <ul>
+            <li>1, если найден предмет с признаком x</li>
+            <li>0, если доказано, что предмета x не будет</li>
+            <li>i, если неизвестно</li>
+          </ul>
+        </section>
+        <section id="overlinebigveex-overline-y" class="slide level1">
+          <h1>
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mover
+                    ><mrow
+                      ><mo>⋁</mo
+                      ><mrow
+                        ><mi>x</mi
+                        ><mover><mi>y</mi><mo accent="true">¯</mo></mover></mrow
+                      ></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>=</mo></mrow
+                ><annotation encoding="application/x-tex"
+                  >\overline{\bigvee{x \overline {y}}}=</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <p>“Не бывает X без Y”</p>
+          <p>
+            Вместе с условием сосуществования противоположностей составляет
+            основу <em>отношения следования</em>
+          </p>
+          <ul>
+            <li>
+              определений следования - множество, <em>возможно</em> что это
+              правильное.
+            </li>
+          </ul>
+        </section>
+        <section id="пример-для-bigveex" class="slide level1">
+          <h1>
+            Пример для
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow><mo>⋁</mo><mi>x</mi></mrow
+                ><annotation encoding="application/x-tex"
+                  >\bigvee{x}</annotation
+                ></semantics
+              ></math
+            >
+          </h1>
+          <p>Можно дедуктивно решать задачи!</p>
+          <p>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mo>⋁</mo
+                  ><mrow
+                    ><mi>С</mi><mi>о</mi><mi>к</mi><mi>р</mi><mi>а</mi
+                    ><mi>т</mi></mrow
+                  ><mo>⋅</mo><mrow></mrow><mo>⋁</mo
+                  ><mover
+                    ><mrow
+                      ><mi>С</mi><mi>о</mi><mi>к</mi><mi>р</mi><mi>а</mi
+                      ><mi>т</mi></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>⋅</mo><mrow></mrow></mrow
+                ><annotation encoding="application/x-tex"
+                  >\bigvee{Сократ}\cdot{}\bigvee{\overline{Сократ}}\cdot{}</annotation
+                ></semantics
+              ></math
+            >
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mi>⋅</mi><mrow></mrow><mo>⋁</mo
+                  ><mrow
+                    ><mi>Ч</mi><mi>е</mi><mi>л</mi><mi>о</mi><mi>в</mi><mi>е</mi
+                    ><mi>к</mi></mrow
+                  ><mo>⋅</mo><mrow></mrow><mo>⋁</mo
+                  ><mover
+                    ><mrow
+                      ><mi>Ч</mi><mi>е</mi><mi>л</mi><mi>о</mi><mi>в</mi
+                      ><mi>е</mi><mi>к</mi></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>⋅</mo><mrow></mrow></mrow
+                ><annotation encoding="application/x-tex"
+                  >\cdot{}\bigvee{Человек}\cdot{}\bigvee{\overline{Человек}}\cdot{}</annotation
+                ></semantics
+              ></math
+            >
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mi>⋅</mi><mrow></mrow><mo>⋁</mo
+                  ><mrow
+                    ><mi>С</mi><mi>м</mi><mi>е</mi><mi>р</mi><mi>т</mi><mi>н</mi
+                    ><mi>ы</mi><mi>й</mi></mrow
+                  ><mo>⋅</mo><mrow></mrow><mo>⋁</mo
+                  ><mover
+                    ><mrow
+                      ><mi>С</mi><mi>м</mi><mi>е</mi><mi>р</mi><mi>т</mi
+                      ><mi>н</mi><mi>ы</mi><mi>й</mi></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>⋅</mo><mrow></mrow></mrow
+                ><annotation encoding="application/x-tex"
+                  >\cdot{}\bigvee{Смертный}\cdot{}\bigvee{\overline{Смертный}}\cdot{}</annotation
+                ></semantics
+              ></math
+            >
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mi>⋅</mi><mrow></mrow
+                  ><mover
+                    ><mrow
+                      ><mo>⋁</mo
+                      ><mrow
+                        ><mi>С</mi><mi>о</mi><mi>к</mi><mi>р</mi><mi>а</mi
+                        ><mi>т</mi><mo>⋅</mo><mrow></mrow
+                        ><mover
+                          ><mrow
+                            ><mi>Ч</mi><mi>е</mi><mi>л</mi><mi>о</mi><mi>в</mi
+                            ><mi>е</mi><mi>к</mi></mrow
+                          ><mo accent="true">¯</mo></mover
+                        ></mrow
+                      ></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>⋅</mo><mrow></mrow></mrow
+                ><annotation encoding="application/x-tex"
+                  >\cdot{}\overline{\bigvee{Сократ \cdot{} \overline{Человек}
+                  }}\cdot{}</annotation
+                ></semantics
+              ></math
+            >
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mi>⋅</mi><mrow></mrow
+                  ><mover
+                    ><mrow
+                      ><mo>⋁</mo
+                      ><mrow
+                        ><mi>Ч</mi><mi>е</mi><mi>л</mi><mi>о</mi><mi>в</mi
+                        ><mi>е</mi><mi>к</mi><mo>⋅</mo><mrow></mrow
+                        ><mover
+                          ><mrow
+                            ><mi>С</mi><mi>м</mi><mi>е</mi><mi>р</mi><mi>т</mi
+                            ><mi>н</mi><mi>ы</mi><mi>й</mi></mrow
+                          ><mo accent="true">¯</mo></mover
+                        ></mrow
+                      ></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ><mo>=</mo></mrow
+                ><annotation encoding="application/x-tex"
+                  >\cdot{}\overline{\bigvee{Человек \cdot{} \overline{Смертный}
+                  }}=</annotation
+                ></semantics
+              ></math
+            >
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
+              ><semantics
+                ><mrow
+                  ><mo>=</mo><mi>…</mi><mrow></mrow><mo>⋅</mo><mrow></mrow
+                  ><mover
+                    ><mrow
+                      ><mo>⋁</mo
+                      ><mrow
+                        ><mi>С</mi><mi>о</mi><mi>к</mi><mi>р</mi><mi>а</mi
+                        ><mi>т</mi><mo>⋅</mo><mrow></mrow
+                        ><mover
+                          ><mrow
+                            ><mi>С</mi><mi>м</mi><mi>е</mi><mi>р</mi><mi>т</mi
+                            ><mi>н</mi><mi>ы</mi><mi>й</mi></mrow
+                          ><mo accent="true">¯</mo></mover
+                        ></mrow
+                      ></mrow
+                    ><mo accent="true">¯</mo></mover
+                  ></mrow
+                ><annotation encoding="application/x-tex"
+                  >=\ldots{}\cdot{}\overline{\bigvee{Сократ \cdot{}
+                  \overline{Смертный}}}</annotation
+                ></semantics
+              ></math
+            >
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+    <!-- reveal.js plugins -->
+    <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+    <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+    <script>
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: "bottom-right",
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: "faded",
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: "all",
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: "default",
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: "block",
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: "slide",
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: "default",
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: "fade",
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [RevealNotes, RevealSearch, RevealZoom],
+      });
+    </script>
+  </body>
+</html>
